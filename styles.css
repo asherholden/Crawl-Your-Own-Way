@@ -424,6 +424,13 @@ h6 {
     background-color: #f1eadc;
 }
 
+.about-section .about-image {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
 .about-image {
     position: relative;
     padding: 15px;
@@ -550,6 +557,18 @@ h6 {
     background-color: var(--cream);
 }
 
+.section-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+
+.about-button {
+    margin-top: 20px;
+}
+
 .gallery-image {
     width: 100%;
     height: 150px;
@@ -561,6 +580,8 @@ h6 {
 .gallery-image:hover {
     transform: scale(1.03);
 }
+
+
 
 
 /* =========================================
@@ -1166,7 +1187,8 @@ h6 {
 
 .about-page {
     background-color: var(--creamk);
-    padding: 100px 0;
+    padding: 18px 0;
+   
 }
 
 .about-content {
@@ -1180,6 +1202,7 @@ h6 {
 
 .about-container {
     display: flex;
+    justify-content: center;
 }
 
 .about-image {
@@ -1246,8 +1269,8 @@ h6 {
 .contact-info {
     display: flex;
     justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
+    gap: 40px;
+    flex-direction: column;
 }
 
 .contact-item {
