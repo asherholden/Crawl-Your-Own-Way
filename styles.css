@@ -98,7 +98,7 @@ h6 {
 }
 
 .nav-link:hover::after,
-.nav-link.active::after {
+.nav-link.hover::after {
     width: 100%;
 }
 
@@ -137,19 +137,6 @@ h6 {
 
 /* HERO */
 
-/* .hero {
-    min-height: 600px;
-    position: relative;
-    
-
-    background-image: url("assets/hero.jpeg");
-    background-size: cover;
-    background-position: center;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 .hero {
     min-height: 85vh;
@@ -464,9 +451,7 @@ h6 {
 }
 
 
-/* =========================================
-   TYPES OF CRAWLS
-========================================= */
+/* TYPES OF CRAWLS*/
 
 .icons{
     display: flex;
@@ -507,9 +492,7 @@ h6 {
 }
 
 
-/* =========================================
-   PRIVATE CRAWLS
-========================================= */
+/*  PRIVATE CRAWLS */
 
 .private-section {
     min-height: 420px;
@@ -548,9 +531,7 @@ h6 {
 }
 
 
-/* =========================================
-   GALLERY
-========================================= */
+/* GALLERY */
 
 .gallery-section {
     padding: 90px 0;
@@ -560,35 +541,37 @@ h6 {
 .section-heading {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 
-
+.section__gallery {
+    display: flex;
+    flex-wrap: row;
+    justify-content: center;
+    gap: 20px;
+}
 
 .about-button {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
 }
 
-.gallery-image {
+.gallery-img {
     width: 100%;
-    height: 150px;
+    max-width: 400px;
+    height: 300px;
     object-fit: cover;
+    border: 2px solid #333;
     border-radius: 8px;
     transition: 0.3s ease;
 }
 
-.gallery-image:hover {
+.gallery-img:hover {
     transform: scale(1.03);
 }
 
-
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-
+/* FOOTER */
 
 .site-footer {
     background-color: var(--black);
@@ -640,7 +623,6 @@ h6 {
     width: fit-content;
     margin-bottom: 12px;
 }
-
 
 /* LOCATION */
 
@@ -703,10 +685,6 @@ h6 {
     color: var(--black);
 }
 
-
-
-
-
 /* BOTTOM */
 
 .footer-bottom {
@@ -729,6 +707,23 @@ h6 {
 
 @media (max-width: 700px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
+    
+    .section__gallery {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .gallery-img {
+       max-width: 100%;
+       height: auto;
+    }
+
     .site-footer {
         padding: 55px 0 20px;
     }
@@ -744,9 +739,7 @@ h6 {
 }
 
 
-/* =========================================
-   MOBILE
-========================================= */
+/* MOBILE */
 
 @media (max-width: 700px) {
 
@@ -805,9 +798,7 @@ h6 {
 }
 
 
-/* =========================================
-   EVENTS PAGE
-========================================= */
+/* EVENTS PAGE */
 
 .page-header {
     background-color: var(--cream);
@@ -912,9 +903,7 @@ h6 {
 }
 
 
-/* =========================================
-   EVENTS PAGE — MOBILE
-========================================= */
+/* EVENTS PAGE — MOBILE */
 
 @media (max-width: 700px) {
 
@@ -985,6 +974,8 @@ h6 {
     break-inside: avoid;
     margin-bottom: 18px;
     overflow: hidden;
+    border: 2px solid #333;
+    border-radius: 6px;
 }
 
 .gallery-item img {
@@ -1186,7 +1177,7 @@ h6 {
 ========================================= */
 
 .about-page {
-    background-color: var(--creamk);
+    background-color: var(--cream);
     padding: 18px 0;
    
 }
