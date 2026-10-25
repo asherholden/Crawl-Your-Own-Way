@@ -11,6 +11,7 @@
   --gold: #b4863c;
   --gold-light: #d8c09a;
   --white: #ffffff;
+  --champagne-beige: #EAE0CE;
 }
 
 /*  BASIC RESET */
@@ -26,6 +27,14 @@ body {
   color: var(--black);
   background-color: var(--cream);
   line-height: 1.6;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.row {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 img {
@@ -37,6 +46,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+
+
 
 /*  HEADINGS */
 
@@ -141,13 +153,14 @@ h6 {
       rgba(0, 0, 0, 0.2) 50%,
       rgba(0, 0, 0, 0) 75%
     ),
-    url('assets/hero.JPG');
+    url('assets/gal-4.JPG');
 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   position: relative;
+  overflow-x: hidden;
 }
 
 /* Dark overlay over the image */
@@ -601,7 +614,7 @@ h6 {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin-bottom: 25px;
+
   margin-left: 10px;
 }
 
@@ -616,7 +629,9 @@ h6 {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.85rem;
   padding-left: 2px;
+  margin-left: 16px;
 }
+
 
 /* SOCIAL ICONS */
 
@@ -624,6 +639,10 @@ h6 {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.footer-socials p {
+  margin-bottom: 0;
 }
 
 .footer-socials a {
@@ -649,6 +668,7 @@ h6 {
   line-height: 1;
 }
 
+
 .footer-socials a:hover {
   background-color: var(--gold);
   color: var(--black);
@@ -669,6 +689,10 @@ h6 {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.7rem;
 }
+/* 
+#footer p {
+  margin-bottom: none;
+} */
 
 /* MOBILE */
 
@@ -760,6 +784,10 @@ h6 {
 
 /* EVENTS PAGE */
 
+.upcoming__events {
+  background-color: #EAE0CE;
+}
+
 .page-header {
   background-color: var(--cream);
   padding: 110px 0 85px;
@@ -789,77 +817,55 @@ h6 {
   padding: 30px 0 100px;
 }
 
-.month-section {
-  margin-bottom: 90px;
+.event__info {
+  width: 50%;
+  padding: 16px;
 }
 
-.month-heading {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-  margin-bottom: 30px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid rgba(23, 23, 23, 0.2);
+.event__tikets {
+  width: 50%;
+  padding: 16px;
 }
 
-.month-heading > span {
+.events { 
+  max-width: 100%;
+  margin: 64px 0 0 0;
+}
+
+.event {
   display: flex;
+  background-color: #F7F2E8;
+  margin-bottom: 64px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.event__info {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 75px;
-  height: 75px;
-  background-color: var(--black);
-  color: var(--gold-light);
-  font-family: 'Playfair Display', serif;
-  font-size: 1.7rem;
 }
 
-.month-heading h2 {
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.3rem, 4vw, 4rem);
-  color: var(--black);
+.event__title {
+  text-align: center;
+  color: #29251F;
+  font-size: 48px;
 }
 
-.month-heading .section-eyebrow {
-  margin-bottom: 5px;
+.event__list {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 24px; 
 }
 
-.container-cal {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  margin-bottom: 60px;
-}
-
-.container-cal iframe {
-  width: 100%;
-  height: 600px;
-  border: 0;
-}
-
-.events-bottom-message {
-  padding: 75px 20px;
-  margin-top: 25px;
-  background-color: var(--black);
-  color: white;
-}
-
-.events-bottom-message h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(2.3rem, 5vw, 4rem);
-  margin-bottom: 20px;
-}
-
-.events-bottom-message h2 .script {
-  color: var(--gold-light);
-}
-
-.events-bottom-message p:not(.section-eyebrow) {
-  max-width: 550px;
-  margin: 0 auto 30px;
-  color: #ddd;
-  line-height: 1.8;
+.list__item {
+  text-align: left;
+  padding: 4px;
+  font-size: 20px;
+  margin-left: 60px;
+  color: #29251F;
 }
 
 /* EVENTS PAGE — MOBILE */
@@ -882,6 +888,29 @@ h6 {
   .container-cal iframe {
     height: 350px;
   }
+
+  .event {
+    flex-direction: column;
+  }
+
+  .event__info {
+    width: 100%;
+  }
+
+  .event__tikets {
+    width: 100%;
+  }
+
+  .event__title {
+    font-size:  36px;
+  }
+
+ 
+  .list__item { 
+    margin: 0;
+    font-size: 16px;
+  }
+
 }
 
 /* GALLERY PAGE */
